@@ -1,0 +1,54 @@
+{% extends 'main/layouts/layout-additional.html' %}
+{% load static %}
+
+    {% block title %}
+        Удаление статьи
+    {% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% endblock %}
+
+
+    {% block current-page %}
+        <div class="imp-links">
+            <a href="{% url 'profile' %}"><i class="fas fa-user-circle"></i> My Profile </a>
+            <a href="{% url 'news_home' %}"><i class="fas fa-newspaper"></i> News (Main Page) </a>
+            <a href="{% url 'friends' %}"><i class="fas fa-user-friends"></i> Friends </a>
+            <a href="{% url 'messenger' %}"><i class="fas fa-comments"></i> Messenger </a>
+        </div>
+    {% endblock %}
+
+
+
+    {% block main-container %}
+        <!-- main-content -------------------->
+        <div class="main-content">
+
+  
+
+            <div class="write-post-container">
+
+                <!-- <div class="title">
+                    <h2>Удаление Поста</h2>
+                </div> -->
+                
+                <div class="submit">
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <button class="btn btn-success" type="submit">Удалить Пост</button>
+                    </form>
+                </div>
+                
+            </div>
+
+
+
+
+
+
+        </div>
+    {% endblock %}
+
+

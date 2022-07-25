@@ -1,0 +1,79 @@
+{% extends 'main/layouts/layout-additional.html' %}
+{% load static %}
+
+    {% block title %}
+        Пост - №{{ article.id }}
+    {% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% endblock %}
+
+
+    {% block current-page %}
+        <div class="imp-links">
+            <a href="{% url 'profile' %}"><i class="fas fa-user-circle"></i> My Profile </a>
+            <a href="{% url 'news_home' %}"><i class="fas fa-newspaper"></i> News (Main Page) </a>
+            <a href="{% url 'friends' %}"><i class="fas fa-user-friends"></i> Friends </a>
+            <a href="{% url 'messenger' %}"><i class="fas fa-comments"></i> Messenger </a>
+        </div>
+    {% endblock %}
+
+
+
+    {% block main-container %}
+        <!-- main-content -------------------->
+        <div class="main-content">
+
+  
+            
+
+            <div class="write-post-container details-view">
+                <p>{{ article.date }}</p>
+                <p>{{ article.full_text }}</p>
+            </div>
+
+
+        <div class="post-container">
+            <div class="post-input-container">
+                <div class="btn-comment">  
+                    <a href="{% url 'create_comment' %}" ><span>+</span> Добавить Комментарий</a>
+                </div>
+            </div>
+
+            {% if comments %}
+                {% for element in comments %}
+                <div class="comment-container" style="padding-left: 10px;">
+                    <div class="post-row">
+                        <div class="user-profile comment-title">
+                            <p>Name Surname</p>
+                            <span>{{ element.date }}</span>
+                        </div>
+    
+                        <a href="#"> <i class="fas fa-ellipsis-v"></i> </a>   <!-- Можно добавить Функционал (Потом нужно ПЕРЕПИСАТЬ) -->
+                    </div>
+
+
+                    <p id="comment-content">{{element.comment}}</p>
+
+
+                    <hr>
+
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="post-container">
+                    <p>Нет комментариев</p>
+                </div>
+            {% endif %}
+        </div>
+
+
+
+
+
+
+        </div>
+    {% endblock %}
+
+

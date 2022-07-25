@@ -1,0 +1,1158 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+
+}
+
+
+/* @media screen and (min-width: 800px) {
+    .container {
+      margin: 1em 2em;
+    }
+  }  */
+
+
+
+
+
+
+
+:root {
+    --body-color: #bfc8cf;
+    --nav-color: #3a79d1;    /* Верхний Navbar (полностью) */
+    --bg-color: #fff;    /*  Background main div элементов */
+
+    --header-logo-color: var(--bg-color);
+    --sidebar-font-color: var(--nav-color);
+
+
+    --left-sidebar-font-color:  var(--body-font-color);
+
+
+    --nav-font-color: var(--nav-color);
+    --body-font-color: black;
+
+
+    --footer-font-color: #868383;
+
+
+
+    --current-page-link-color: var(--nav-color);
+    --current-page-icon-color: #fff;
+
+
+    --search-caret-color: black;
+}
+.dark-theme {
+    --body-color: #222020;
+    --nav-color: #363535;
+    --bg-color: #363535;
+
+    --header-logo-color: var(--bg-color);
+    --sidebar-font-color: #8f8e8e;
+
+
+    --left-sidebar-font-color:  #777777;
+
+
+
+    --body-font-color: #fff;
+    --nav-font-color: #fff;
+
+
+    --footer-font-color: #9a9a9a;
+
+
+    --current-page-link-color: #535252;
+
+    --search-caret-color: #fff;
+}
+
+
+
+body {
+    background: var(--body-color);   /* #efefef;     бежевый */
+    transition: background 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    margin: auto;
+    width: 90%;
+}
+
+.header {
+    background: var(--nav-color); 
+
+    min-width: 800px;
+    
+
+    position: sticky;   /* Эти 3 строчки кода, делают - NavBar(верхний) ФИКСИРОВАННЫМ при скроле страницы  */
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;  
+
+}
+
+
+
+
+
+.logo-word {
+    min-width: 290px;
+
+    text-decoration: none;
+    color: var(--nav-font-color);
+    text-align: center;
+
+    font-size: 25px;
+    
+    background-color: var(--header-logo-color);
+    border-radius: 13px;
+
+    padding: 3px 20px;
+}
+
+
+ 
+.nav-left, .nav-right, .nav-middle {
+    display: flex;
+    align-items: center;     
+}
+
+.nav-left {
+    min-width: 130px;
+}
+
+.nav-left ul li {
+    list-style: none;
+    display: inline-block;  /* Все  li в одну линию - Горизонтально */  
+}
+
+.nav-left ul li i {   /* Манипуляции между li */ 
+    margin: 0 10px;
+}
+
+
+.nav-user-icon img {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-user-icon {
+    margin-left: 30px;
+}
+
+.search-box {
+    background: #efefef;
+    width: 170px;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 15px; 
+}
+
+.search-box img {
+    width: 18px;
+}
+
+.search-box input {
+    width: 100%;
+    background: transparent;
+    
+    padding: 10px;
+    outline: none; 
+    border: 0; 
+
+    caret-color: var(--search-caret-color);
+}
+
+
+.online {
+    position: relative;
+}
+.online::after {    /* Псевдо-элемент */
+    content: '';    
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: #41db51;  /* online отвечает за Зеленую точку - На Правом ВЕРХНЕМ углу Аккаунта  */
+    position: absolute;  
+    top: 0;   
+    right: 0;    
+
+}
+
+
+
+/* -------------- Container  _  (<div class="container">) -------------- */
+/* -------------- Left-SideBar -------------- */
+.container {
+    display: flex;
+    justify-content: space-between;   /* ? */
+    padding: 13px 5%;
+}
+.left-sidebar {
+    /* background: #cbdffa;         Отоброжения Div элемента  */
+    flex-basis: 25%;        
+    position: sticky;       
+    top: 70px;
+    align-self: flex-start;     
+
+
+    background: var(--bg-color);
+    /* padding: 20px; */
+    border-radius: 4px;
+}
+
+.right-sidebar {
+    /* background: #cbdffa;         Отоброжения Div элемента  */
+    flex-basis: 25%;
+    position: sticky;       
+    top: 70px;
+    align-self: flex-start;
+
+    
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 4px;
+    color: #626262;
+}
+
+.main-content {
+    flex-basis: 80%;     
+    margin: 0 10px;
+}
+
+
+
+
+
+.shortcut-links {
+    padding: 20px;
+}
+
+.imp-links a, .shortcut-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: var(--left-sidebar-font-color);
+    width: fit-content;      
+
+    font-size: 17px;
+}
+
+.imp-links a img {
+    width: 25px;
+    margin-right: 15px; 
+}
+
+
+
+.imp-links {
+    border-bottom: 1px solid #ccc;
+}
+
+
+.shortcut-links a {
+    color: #626262;
+}
+
+.shortcut-links a img {
+    width: 40px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+.shortcut-links p {
+    margin: 20px 0;
+    font-size: 17px;
+    color: #626262;
+}
+
+
+
+
+
+
+/* -------------- Right-SideBar -------------- */
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;      
+    margin-bottom: 18px;
+}
+
+.right-sidebar h4 {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--body-font-color);
+}
+
+.sidebar-title a {
+    text-decoration: none;
+    color: rgb(22, 147, 189);
+    font-size: 14px;
+}
+
+.online-list .suggested-friends {
+    display: flex;
+}
+
+
+.online-list button {
+    background: transparent;
+    border: 2px solid var(--sidebar-font-color);
+    border-radius: 30px;
+    padding: 5px 25px;
+
+    color: var(--sidebar-font-color);
+    font-weight: bold;
+
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.online-list button:hover {
+    background: var(--sidebar-font-color);
+    color: #fff;
+
+}
+
+.suggested-friends span {
+    margin-left: 45px;
+
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.suggested-friends span a {
+    text-decoration: none;
+    padding: 0;
+
+    color: var(--sidebar-font-color);
+}
+
+
+
+
+
+
+
+.see-more {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.see-more a {
+    text-decoration: none;
+    color: rgb(22, 147, 189);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.online-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.online-list .online img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.online-list .online {
+    width: 40px;
+    /* border-radius: 50%; */
+    margin-right: 15px;
+}
+
+.online-list .online::after {        
+    top: unset;             
+    bottom: 5px;
+}
+
+
+.online-list p {
+    color: #777777;
+}
+
+
+
+
+
+
+
+
+
+/* -------------- Main Content (<div class="main-content">) ----------- */
+
+.story-gallery {
+    display: flex;
+    justify-content: space-between;             
+    margin-bottom: 20px;
+}
+
+.story {                      
+    flex-basis: 18%;
+    padding-top: 32%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+.story img {
+    position: absolute;
+    width: 45px;     /* 100% / 2 */
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    border: 5px solid #1876f2;
+}
+
+.story p {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px; 
+}
+
+.story1 {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/status-1.png);
+}
+.story2 {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/status-2.png);
+}
+.story3 {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/status-3.png);
+}
+.story4 {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/status-4.png);
+}
+.story5  {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/status-5.png);
+}
+
+
+
+
+
+
+.story .story1 img {
+    top: unset;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    border: 0;
+    width: 35px;
+}
+
+
+
+
+
+.write-post-container {
+    width: 100%;          
+    background: var(--bg-color);
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-profile p {
+    margin-bottom: -5px;
+    font-weight: 500;
+    color: var(--body-font-color);
+}
+
+.user-profile small {
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/* .post-input-container {
+    padding-left: 55px;
+    padding-top: 13px;
+} */
+
+.post-input-container textarea {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    resize: none;
+
+    margin-right: 10px;
+
+    caret-color: var(--search-caret-color);
+}
+
+
+
+
+/* .add-post-links {
+    display: flex;
+    margin-top: 10px;
+} */
+
+.add-post-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #626262;
+    margin-right: 30px;
+    font-size: 13px;
+}
+
+.add-post-links a img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.post-container {
+    width: 100%;
+    background: var(--bg-color);
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+
+    margin: 20px 0;
+}
+
+
+
+
+
+.user-profile span {
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+
+
+.post-text {
+    color: var(--body-font-color);
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+
+
+.post-text a {
+    color: #1876f2;
+    text-decoration: none;
+}
+
+
+
+.post-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+
+
+.post-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ------------ Лайки + Комменты + Share ------------- */
+.activity-icons a img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.activity-icons a {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+
+
+.post-portfile-icon img {
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+
+
+.post-row a {
+    color: #9a9a9a;
+}
+
+
+
+
+
+
+
+
+.load-more-btn {
+    display: block;       
+    margin: auto;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #9a9a9a;
+    color: #626262;
+    background: transparent;
+    border-radius: 4px;
+
+}
+
+
+
+
+/* --------------- settings-menu -------------- */
+.settings-menu {
+    position: absolute;
+    width: 90%;
+    max-width: 350px;
+    /* height: 500px;      */
+    background: var(--bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    
+    overflow: hidden;   
+    top: 108%;
+    right: 5%;
+    max-height: 0;   /* Dropping the MENU (Accout information) + Js */
+
+    transition: max-height 0.3s;  /* Время перехода */
+}
+
+.settings-menu-height {
+    max-height: 450px;     /* Dropping the MENU (Account information) + Js */
+}
+
+
+.user-profile a {
+    font-size: 12px;
+    color: #1876f2;
+    text-decoration: none;
+}
+
+
+
+
+
+.settings-menu-inner {
+    padding: 20px;
+}
+
+.settings-menu hr {
+    border: 0;
+    height: 1px;
+    background: #9a9a9a;
+    margin: 15px 0;
+}
+
+
+
+
+.setting-links {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.setting-links .settings-icon {
+    width: 38px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.setting-links a {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--sidebar-font-color);
+}
+
+
+
+
+
+/* -------------- Toggle (dark/light mode) -------------- */
+#dark-btn {              
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ccc;
+    width: 45px;
+    border-radius: 15px;
+    padding: 2px 3px;
+    cursor: pointer;
+
+    display: flex;
+
+    transition: padding-left 0.5s, background 0.5s;  
+}
+
+#dark-btn span {          
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+
+    display: inline-block;   
+}
+
+
+
+
+
+#dark-btn.dark-btn-on {       
+    padding-left: 23px;
+    background: #0a0a0a;
+}
+
+
+
+
+
+
+/* -------------- Footer ------------- */
+.footer {
+    text-align: center;
+    color: var(--footer-font-color);
+    padding: 10px 0 20px;
+    font-size: 13px;
+}
+
+
+
+
+/* /////////// Icons (styling) ////////// */
+.fa-map-marker-alt {
+    margin-right: 5px; 
+}
+
+
+.fa-image {
+    font-size: 20px;
+    color: var(--sidebar-font-color);
+}
+
+
+.fa-angle-double-right {
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+
+
+
+/* ----------- left-sidebar ---------- */
+#current-page {
+    color: #fff;
+    font-weight: bold;
+
+    background-color: var(--current-page-link-color);
+    /* padding: 10px;
+    padding-right: 40px; */
+    padding: 10px;
+    padding-right: 40px;
+
+
+    width: 100%;  
+}
+
+#current-page i {
+    color: var(--current-page-icon-color);
+}
+
+
+.imp-links *:not(#current-page) {
+    padding: 10px;
+}
+
+
+
+
+
+
+
+.fa-user-circle {
+    color: var(--sidebar-font-color);
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.fa-newspaper {
+    color: var(--sidebar-font-color);
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.fa-user-friends {
+    color: var(--sidebar-font-color);
+    font-size: 22px;
+    margin-right: 10px;
+}
+.fa-comments {
+    color: var(--sidebar-font-color);
+    font-size: 22px;
+    margin-right: 10px;
+}
+.fa-music {
+    color: var(--sidebar-font-color);
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+
+
+.notification-icon-header {
+    color: #fff;
+    font-size: 20px;
+}
+
+.messenger-icon-header {
+    color:#fff;
+    font-size: 20px;
+}
+
+.music-icon-header {
+    color:#fff;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------ News page ---------------- */
+.title {
+    text-align: center;
+}
+
+.title p {
+    border-bottom: 1px solid #ccc;
+
+    margin-bottom: 15px;
+}
+
+
+.write-post-container {
+    padding-bottom: 30px;
+}
+
+
+.write-post-container p {
+    margin-top: 15px;
+}
+
+.write-post-container span, .btn-comment span {
+    color: rgb(75, 143, 245);
+
+    background-color: #fff;
+
+    border-radius: 60%;
+    padding: 0px 6px;
+
+    font-weight: bold;
+}
+
+.write-post-container a, .btn-comment a {
+    background: none;
+    border: none;
+
+    background-color: rgb(75, 143, 245);
+
+    color: #fff;
+    font-size: 25px;
+
+    padding: 10px;
+    border-radius: 5px;
+
+    text-align: center;
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+
+
+.write-post-container h2 {
+    color: var(--body-font-color);
+    font-size: 30px;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+.alert-warning {
+    background-color: rgb(240, 240, 169);
+    
+    margin: 50px;
+
+    margin-bottom: 30px;
+    margin-top: 25px;
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 30px;
+}
+
+.alert-warning h3 {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.alert-warning p {
+    font-size: 17px;
+
+}
+
+/* ---------------------- News (Главная страница) ----------------------- */
+.user-profile p {
+    font-size: 17.5px;
+}
+
+.user-profile small {
+    font-size: 15px;
+}
+
+.user-profile span {
+    font-size: 16px;
+    color: #777777;
+    
+}
+
+
+
+/* ------------- Create (Добавить запись) ------------ */
+form {
+    text-align: center;
+}
+
+form input, textarea {
+    font-size: 18px;
+
+    padding: 13px;
+    margin: 5px 0;
+
+    border-radius: 5px;
+    
+    width: 500px;
+}
+
+
+
+.submit {
+    text-align: center;
+}
+
+.submit button {
+    background: none;
+    border: none;
+
+    background-color: rgb(23, 182, 23);
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+    padding: 10px 15px;
+    margin: 10px;
+
+    border-radius: 5px;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+/* ------------Кнопка (Читать детальнее)-------------- */
+.alert-warning a {
+    background-color: rgb(230, 218, 55);
+    color: rgb(31, 29, 29);
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    font-size: 25px;
+
+    padding: 10px 7px;
+}
+
+.alert-warning p {
+    margin-bottom: 20px;
+}
+
+
+
+
+/* ------------- Кнопки (Delete, Edit) ------------ */
+.details-view p {
+    font-size: 19px;
+
+    padding: 5px 30px;
+
+    color: var(--body-font-color);
+}
+
+.details-view .title {
+    padding: 0px 30px;
+}
+
+
+.flex {
+    display: flex;
+    gap: 40px;
+
+    margin-top: 25px;
+    
+    padding: 0px 30px;
+}
+
+
+.delete a {
+    background-color: red;
+}
+
+
+
+.btn-comment {
+    width: 500px;
+    height: 30px;
+
+    font-size: 18px;
+
+    margin: 10px;
+}
+
+.comment-container {
+    width: 100%;
+    background: var(--bg-color);
+    border-radius: 6px;
+    color: #626262;
+
+    margin: 30px 0;
+
+    /* border-bottom: 1px solid grey; */
+}
+
+.comment-container hr {
+    border: 0;
+    height: 1.5px;
+    background: #9a9a9a;
+    margin: 15px 0;
+}
+
+
+.comment-title p {
+    margin-bottom: 1px;
+}
+
+.comment-title span {
+    margin-left: 10px;
+}
+
+#comment-content {
+    margin-top: 10px;
+
+    font-size: 20px;
+}
+
+
+
+
+
+/* ------------------- Slider ------------------ */
+.carousel {
+    background: #EEE;
+  }
+  
+  .carousel-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: rgb(75, 143, 245);
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }

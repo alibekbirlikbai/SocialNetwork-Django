@@ -1,0 +1,230 @@
+@import "../styles.css";
+
+
+:root {
+    --top-font-color: black;
+}
+.dark-theme {
+    --top-font-color: #fff;
+}
+
+
+.header {
+    min-width: 1000px;
+}
+.nav-left {
+    min-width: 130px;
+}
+.logo-word {
+    min-width: 290px;
+}
+
+
+.left-sidebar {
+    /* background: #cbdffa;         Отоброжения Div элемента  */
+    flex-basis: 25%;        
+    position: sticky;      
+    top: 70px;
+    align-self: flex-start;     
+
+
+    background: var(--bg-color);
+    /* padding: 20px; */
+    border-radius: 4px;
+}
+
+
+.main-content {
+    flex-basis: 70%;        
+    margin-left: 3vw;
+}
+
+
+.top {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 18px;
+}
+
+
+
+
+
+
+
+.main-left {
+    background: var(--bg-color);
+    border-radius: 4px;
+
+    margin-bottom: 18px;
+}
+
+.main-right {
+    border-radius: 4px;
+    background: var(--bg-color);
+
+    margin-bottom: 18px;
+    padding: 0;
+}
+
+
+
+.profile-photo {
+    text-align: center;
+}
+
+
+.profile-photo img{
+    border-radius: 50%;
+
+    margin-top: 30px;
+    margin-bottom: 0.1vw;
+
+    width: 150px;
+}
+
+
+
+
+
+
+.top button {
+    background: transparent;
+    border: 2px solid var(--sidebar-font-color);
+    border-radius: 5px;
+    padding: 5px 25px;
+
+    color: var(--sidebar-font-color);
+    font-weight: bold;
+
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.top button:hover {
+    background: var(--sidebar-font-color);
+    color: #fff;
+}
+
+.top button {
+    margin-top: 2vw;
+    padding: 0.7vw 1.3vw;
+}
+
+
+
+
+
+.top hr {
+    background-color: #777777;
+    border: none;
+
+    height: 1px;
+
+    margin: 0 22px;
+}
+
+
+
+
+
+
+
+
+.main-right {
+    color: #777777;
+}
+
+
+
+.profile-info {
+    background: var(--bg-color);
+
+    padding: 0px 20px;
+
+
+    border-radius: 4px 4px 0 0;
+}
+
+
+
+.info-main {
+    padding: 15px 5px;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+.info-main h2 {
+    color: var(--top-font-color);
+}
+.info-main small {
+    font-size: 18px;
+}
+
+
+
+
+
+.info-content {
+    width: 100%;       
+    background: var(--bg-color);
+    border-radius: 0 0 4px 4px;
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    color: #626262;
+}
+
+
+
+
+
+
+.box {
+    width: 370px;
+}
+
+.box div {
+    display: grid;
+    grid-template-columns: 39% 61%;
+}
+
+.box div p {
+    width: 250%;
+}
+
+
+#info-personal {
+    width: 250%;
+
+    color: var(--top-font-color);
+    font-size: 1.2vw;
+}
+
+
+
+
+
+
+
+
+
+/* ------------    --------- */
+.fa-ellipsis-h {
+    color: #b3adad; 
+}
+
+
+.messenger-container-title a {
+    margin-left: 16.9vw;
+}
+
+#current-page {
+    border-radius: 4px 4px 0 0; 
+}

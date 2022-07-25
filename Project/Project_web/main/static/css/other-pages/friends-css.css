@@ -1,0 +1,151 @@
+@import "../styles.css";
+
+:root {
+    --title-color: black;
+    --search-back-color: #d6dbe9;
+    --friends-name-color: black;
+}
+.dark-theme {
+    --title-color: #fff;
+    --search-back-color: #535252;
+    --friends-name-color: #fff;
+}
+
+
+.header {
+    min-width: 1000px;
+}
+
+
+.friends-container {
+    width: 80%;          
+    background: var(--bg-color);
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    margin-left: 20px;
+}
+
+.friends-row {
+    display: flex;
+}
+
+
+.friends-row p {
+    color: var(--friends-name-color);
+}
+
+
+
+
+.online-list-left {
+    padding: 5px;
+    margin: 10px 0;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #626262;
+}
+
+
+
+
+.friends-container-title {
+    color: #fff;
+    font-size: 20px;
+
+
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+}
+
+.friends-container-title h3 {
+    color: var(--title-color)
+}
+
+
+.friends-container-title span {
+    color: #777777;
+
+    font-size: 17px;
+    margin-left: 5px;
+}
+
+
+.search-box-friends {
+    background: var(--search-back-color);
+
+    width: 100%;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 15px; 
+}
+
+.search-box-friends img {
+    width: 18px;
+}
+
+.search-box-friends input {
+    background: transparent;  /*  */
+    
+    padding: 10px;
+    outline: none;    /*  */
+    border: 0; 
+
+    color: #807a7a;  
+    
+    caret-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+.friends-container-message {
+    text-decoration: none;
+
+    color: #777777;
+}
+
+
+
+
+.online-list-left .online img {
+    width: 50px;
+    border-radius: 50%;
+
+    margin-right: 10px;
+}
+
+.online-list-left .online {
+    width: 50px;
+    /* border-radius: 50%;      */
+    margin-right: 15px;
+}
+
+.online-list-left .online::after {          
+    top: unset;                  
+    bottom: 5px;
+}
+
+
+
+
+
+
+
+/* ------------    --------- */
+.fa-ellipsis-h {
+    color: #626262;
+
+    margin-left: 32.5vw;
+}

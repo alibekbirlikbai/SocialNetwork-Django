@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>{% block title %}{% endblock %}</title>
+
+
+    {% block style %}{% endblock %}
+
+
+    <script src="https://kit.fontawesome.com/04cc21b0af.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="header">
+
+        <nav class="center">
+            <div class="nav-left">
+                <ul>
+                    <li>
+                        <a href="{% url 'friends' %}">
+                            <i class="fas fa-bell notification-icon-header"></i>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="{% url 'messenger' %}">
+                            <i class="fas fa-comments messenger-icon-header"></i>
+                        </a>
+                    </li>
+                </ul>
+    
+            </div>
+    
+    
+    
+            <div class="nav-middle">
+                <a href="{% url 'news_home' %}" class="logo-word">
+                    Social Media (Logo)
+                    <!-- <img src="{% static 'images/logo.png' %}" class="logo"> -->
+                </a>
+            </div>
+    
+    
+            <div class="nav-right">
+    
+                <div class="search-box">
+                    <img src="{% static 'images/search.png' %}">  
+                    <input type="text" placeholder="Search">
+                </div>
+    
+                <!--  -->
+                <div class="nav-user-icon  online" onclick="settingsMenuToggle()">   <!-- Profile's photo (Аватарка)    +   Добавлен класс = 'online' -> {online отвечает за Зеленую точку - На Правом ВЕРХНЕМ углу Аккаунта}-->     
+                    <img src="{% static 'images/profile-pic.png' %}">
+                </div>
+    
+            </div>
+    
+    <!--------------- settings-menu ------------------>
+            <div class="settings-menu">
+    
+                <div id="dark-btn">
+                    <span></span>
+                </div>
+    
+                <div class="settings-menu-inner">
+    
+                    <div class="user-profile">
+                        <img src="{% static 'images/profile-pic.png' %}">
+                        <div>
+                            <p>Name Surname</p>
+                            <a href ="{% url 'profile' %}">See your profile</a>
+                        </div>
+                    </div>        
+                    
+    
+                    <hr>
+    
+    
+    
+    
+                    <!-- <div class="setting-links">
+                        <img src="{% static 'images/setting.png' %}" class="settings-icon">
+                        <a href="#"> Settings & Privacy <img src="{% static 'images/arrow.png' %}" width="10px"></a>
+                    </div> -->
+    
+
+                    <div class="setting-links">
+                        <img src="{% static 'images/help.png' %}" class="settings-icon">
+                        <a href="{% url 'support' %}"> Help & Support <img src="{% static 'images/arrow.png' %}" width="10px"></a>
+                    </div>
+
+                    <div class="setting-links">
+                        <img src="{% static 'images/setting.png' %}" class="settings-icon">
+                        <a href="{% url 'feedback' %}"> Feedback <img src="{% static 'images/arrow.png' %}" width="10px"></a>
+                    </div>
+                    
+                    <div class="setting-links">
+                        <img src="{% static 'images/feedback.png' %}" class="settings-icon">
+                        <a href="{% url 'about' %}"> About us <img src="{% static 'images/arrow.png' %}" width="10px"></a>
+                    </div>
+    
+                    <div class="setting-links">
+                        <img src="{% static 'images/logout.png' %}" class="settings-icon">
+                        <a href="#"> Logout <img src="{% static 'images/arrow.png' %}" width="10px"></a>
+                    </div>
+    
+    
+    
+                </div>
+    
+                
+            </div>
+    
+    
+        </nav>
+
+    </div>
+
+
+  
+
+
+
+
+
+    <div class="container center">
+
+        <!-- left-sidebar -------------------->
+        <div class="left-sidebar">
+            {% block current-page %}
+            {% endblock %}
+
+            <div class="shortcut-links">
+                <p>Your Shortcuts (Ярлыки)</p>
+                <a href="#"><img src="{% static 'images/shortcut-1.png' %}"> Lorem ipsum dolor sit amet consectetur. </a> <!-- Web Developers -->
+                <!-- <a href="#"><img src="{% static 'images/shortcut-2.png' %}"> Web Design course </a>
+                <a href="#"><img src="{% static 'images/shortcut-3.png' %}"> Full Stack Development </a>
+                <a href="#"><img src="{% static 'images/shortcut-4.png' %}"> Website Experts </a> -->
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- main-content -------------------->
+        <div class="main-content">
+            
+
+            {% block main-container %}
+            {% endblock %}
+
+
+        </div>
+        
+
+
+
+    
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+        <p> Copyright 2021 - Birlikbai Alibek </p>
+    </div>
+
+
+
+    
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

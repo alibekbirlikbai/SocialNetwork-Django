@@ -1,0 +1,163 @@
+{% extends 'main/layouts/layout-additional.html' %}
+{% load static %}
+
+    {% block title %}
+        Messenger
+    {% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/other-pages/messenger-css.css' %}">
+    {% endblock %}
+
+
+    {% block current-page %}
+        <div class="imp-links">
+            <a href="{% url 'profile' %}"><i class="fas fa-user-circle"></i> My Profile </a>
+            <a href="{% url 'news_home' %}"><i class="fas fa-newspaper"></i> News (Main Page) </a>
+            <a href="{% url 'friends' %}"><i class="fas fa-user-friends"></i> Friends </a>
+            <a href="{% url 'messenger' %}" id="current-page"><i class="fas fa-comments"></i> Messenger </a>
+        </div>
+    {% endblock %}
+
+
+
+
+    {% block main-container %}
+        <div class="messenger-container">
+                    
+                    <div class="messenger-container-title">
+                        <div class="search-box-messenger">
+                            <img src="{% static 'images/search.png' %}">  
+                            <input type="text" placeholder="Search">
+                        </div>
+
+
+                        <a href="#"> <i class="fas fa-ellipsis-h"></i> </a>   <!-- Можно добавить Функционал (Потом нужно ПЕРЕПИСАТЬ) -->
+                    </div>
+
+
+
+                    <div class="chat-list">
+
+                        <div class="online-list-left">
+                            <div>
+                                <img src="{% static 'images/member-1.png' %}">
+                            </div>
+            
+
+
+                            <div class="messenger-row">
+
+                                <div>
+                                    <p>Name Surname <span id="message-date">13 oct</span></p>
+                
+                                    <span class="messenger-container-message">Привет, хочешь сегодня погулять? </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+
+                        <div class="online-list-left">
+                            <div>
+                                <img src="{% static 'images/member-2.png' %}">
+                            </div>
+            
+
+                            <div class="messenger-row">
+
+                                <div>
+                                    <p>Name Surname <span id="message-date">13 oct</span></p>
+                
+                                    <span class="messenger-container-message">Можешь подсказать что задали по Базам Данных? </span>
+                                </div>
+                                
+                            </div>  
+
+                        </div>
+
+
+                        <div class="online-list-left">
+                            <div>
+                                <img src="{% static 'images/member-3.png' %}">
+                            </div>
+            
+
+
+                            <div class="messenger-row">
+
+                                <div>
+                                    <p>Name Surname <span id="message-date">13 oct</span></p>
+                
+                                    <span class="messenger-container-message">... </span>
+                                </div>
+                                                    
+                            </div>  
+
+                        </div>
+            
+
+                        <div class="online-list-left">
+                            <div>
+                                <img src="{% static 'images/member-1.png' %}">
+                            </div>
+            
+
+                            <div class="messenger-row">
+
+                                <div>
+                                    <p>Name Surname <span id="message-date">13 oct</span></p>
+                
+                                    <span class="messenger-container-message">Ахахаха😂😂😂</span>
+                                </div>
+                                                        
+                            </div>
+
+                        </div>
+                        
+
+                        <div class="online-list-left">
+                            <div>
+                                <img src="{% static 'images/member-2.png' %}">
+                            </div>
+
+            
+                            <div class="messenger-row">
+
+                                <div>
+                                    <p>Name Surname <span id="message-date">13 oct</span></p>
+                
+                                    <span class="messenger-container-message">🤙🏻🤙🏻🤙🏻</span>
+                                </div>
+                                                            
+                            </div>    
+                                        
+                        </div>
+            
+                        
+                        <div class="online-list-left">
+                            <div>
+                                <img src="{% static 'images/member-3.png' %}">
+                            </div>
+
+
+            
+                            <div class="messenger-row">
+
+                                <div>
+                                    <p>Name Surname <span id="message-date">13 oct</span></p>
+                
+                                    <span class="messenger-container-message">Рахмет Рахмет))</span>
+                                </div>
+
+                            </div>   
+
+                        </div>
+
+
+                    </div>
+                    
+
+        </div>
+    {% endblock %}

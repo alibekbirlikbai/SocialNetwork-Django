@@ -1,0 +1,193 @@
+@import "../styles.css";
+
+:root {
+    --search-back-color: #d6dbe9;
+    --friends-name-color: black;
+    
+}
+.dark-theme {
+    --search-back-color: #535252;
+    --friends-name-color: #fff;
+}
+
+
+.header {
+    min-width: 1000px;
+}
+
+
+
+
+.messenger-container {
+    width: 80%;
+    background: var(--bg-color);
+    border-radius: 6px;
+    color: #626262;
+
+    margin-left: 20px;
+}
+
+
+
+
+.chat-list {
+    padding: 0 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.messenger-row {
+    display: flex;
+    width: 100%;
+}
+
+.messenger-row div {
+    width: 100%;
+}
+
+.messenger-row span {
+    color: #777777;
+}
+
+
+
+
+
+.messenger-row p {
+    color: var(--friends-name-color);
+    width: 100%;
+    
+    margin-bottom: 5px;
+}
+
+.messenger-row p span {
+    float: right;
+}
+
+
+
+
+
+.online-list-left {
+    padding: 5px;
+    margin: 10px 0;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #626262;
+}
+
+
+
+
+.messenger-container-title {
+    color: #fff;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid #626262;
+    /* background-color: var(--search-back-color); */
+
+    padding: 10px 20px;
+
+    border-radius: 4px 4px 0 0;
+}
+
+.messenger-container-title a {
+    font-size: 1.2vw;
+}
+
+
+.messenger-container-title span {
+    color: #777777;
+
+    font-size: 17px;
+    margin-left: 5px;
+}
+
+
+
+.message-date {
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+.online-list-left  img {
+    width: 50px;
+    border-radius: 50%;
+
+    margin-right: 10px;
+}
+
+.online-list-left .online {
+    width: 50px;
+    /* border-radius: 50%  */
+    margin-right: 15px;
+}
+
+.online-list-left .online::after {          
+    top: unset;                  
+    bottom: 5px;
+}
+
+
+
+
+
+.search-box-messenger {
+    background: var(--search-back-color);
+    
+    width: 300px;
+    border-radius: 20px;
+    
+    display: flex;
+    align-items: center;
+    padding: 0 15px; 
+    margin: 5px;
+}
+
+.search-box-messenger img {
+    width: 18px;
+}
+
+.search-box-messenger input {
+    width: 100%;
+    background: transparent;  /*  */
+    
+    padding: 10px;
+    outline: none;    /*  */
+    border: 0; 
+
+    caret-color: #fff;
+}
+
+
+
+
+
+/* ------------    --------- */
+.fa-ellipsis-h {
+    color: #b3adad; 
+
+    margin-left: 20vw;
+}
+
+
+.messenger-container-title a {
+    margin-left: 5vw;
+}
+

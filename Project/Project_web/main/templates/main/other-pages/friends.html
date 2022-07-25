@@ -1,0 +1,155 @@
+{% extends 'main/layouts/layout-additional.html' %}
+{% load static %}
+
+    {% block title %}
+        Friends
+    {% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/other-pages/friends-css.css' %}">
+    {% endblock %}
+
+
+    {% block current-page %}
+        <div class="imp-links">
+            <a href="{% url 'profile' %}"><i class="fas fa-user-circle"></i> My Profile </a>
+            <a href="{% url 'news_home' %}"><i class="fas fa-newspaper"></i> News (Main Page) </a>
+            <a href="{% url 'friends' %}" id="current-page"><i class="fas fa-user-friends"></i> Friends </a>
+            <a href="{% url 'messenger' %}"><i class="fas fa-comments"></i> Messenger </a>
+        </div>
+    {% endblock %}
+
+
+
+    {% block main-container %}
+        <div class="friends-container">
+                    
+            <div class="friends-container-title">
+                <div>
+                    <h3>My friends <span>6</span></h3>
+                </div>
+        
+                <div class="search-box-friends">
+                    <img src="{% static 'images/search.png' %}">  
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        
+        
+        
+            <div>
+        
+                <div class="online-list-left">
+                    <div class="online">
+                        <img src="{% static 'images/member-1.png' %}">
+                    </div>
+        
+                    <div class="friends-row">
+                        <div>
+                            <p>Name Surname</p>
+        
+                            <a href="#" class="friends-container-message">Write message</a>
+                        </div>
+        
+        
+                        <a href="#"> <i class="fas fa-ellipsis-h"></i> </a>   <!-- Можно добавить Функционал (Потом нужно ПЕРЕПИСАТЬ) -->
+                    </div>
+                </div>
+                
+        
+                <div class="online-list-left">
+                    <div class="online">
+                        <img src="{% static 'images/member-2.png' %}">
+                    </div>
+        
+                    <div class="friends-row">
+                        <div>
+                            <p>Name Surname</p>
+        
+                            <a href="#" class="friends-container-message">Write message</a>
+                        </div>
+                        
+        
+                        <a href="#"> <i class="fas fa-ellipsis-h"></i> </a>   <!-- Можно добавить Функционал (Потом нужно ПЕРЕПИСАТЬ) -->
+                    </div>                
+                </div>
+        
+        
+                <div class="online-list-left">
+                    <div class="online">
+                        <img src="{% static 'images/member-3.png' %}">
+                    </div>
+        
+                    <div class="friends-row">
+                        <div>
+                            <p>Name Surname</p>
+        
+                            <a href="#" class="friends-container-message">Write message</a>
+                        </div>
+                        
+                                                
+                        <a href="#"> <i class="fas fa-ellipsis-h"></i> </a>   <!-- Можно добавить Функционал (Потом нужно ПЕРЕПИСАТЬ) -->
+                    </div>           
+                </div>
+        
+        
+                <div class="online-list-left">
+                    <div class="online">
+                        <img src="{% static 'images/member-1.png' %}">
+                    </div>
+        
+                    <div class="friends-row">
+                        <div>
+                            <p>Name Surname</p>
+        
+                            <a href="#" class="friends-container-message">Write message</a>
+                        </div>
+                                                
+        
+                        <a href="#"> <i class="fas fa-ellipsis-h"></i> </a>   <!-- Можно добавить Функционал (Потом нужно ПЕРЕПИСАТЬ) -->
+                    </div>
+                </div>
+                
+        
+                <div class="online-list-left">
+                    <div class="online">
+                        <img src="{% static 'images/member-2.png' %}">
+                    </div>
+        
+                    <div class="friends-row">
+                        <div>
+                            <p>Name Surname</p>
+        
+                            <a href="#" class="friends-container-message">Write message</a>
+                        </div>
+                                                    
+        
+                        <a href="#"> <i class="fas fa-ellipsis-h"></i> </a>   <!-- Можно добавить Функционал (Потом нужно ПЕРЕПИСАТЬ) -->
+                    </div>                
+                </div>
+        
+                
+                <div class="online-list-left">
+                    <div class="online">
+                        <img src="{% static 'images/member-3.png' %}">
+                    </div>
+        
+                    <div class="friends-row">
+                        <div>
+                            <p>Name Surname</p>
+        
+                            <a href="#" class="friends-container-message">Write message</a>
+                        </div>
+                                                
+        
+                        <a href="#"> <i class="fas fa-ellipsis-h"></i> </a>   <!-- Можно добавить Функционал (Потом нужно ПЕРЕПИСАТЬ) -->
+                    </div>           
+                </div>
+        
+        
+            </div>
+            
+        
+        </div>
+    {% endblock %}
+

@@ -1,0 +1,176 @@
+{% extends 'main/layouts/layout-basic.html' %}
+{% load static %}
+
+    {% block title %}
+        Новости на сайте
+    {% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    {% endblock %}
+
+
+    {% block current-page %}
+        <div class="imp-links">
+            <a href="{% url 'profile' %}"><i class="fas fa-user-circle"></i> My Profile </a>
+            <a href="{% url 'news_home' %}"  id="current-page"><i class="fas fa-newspaper"></i> News (Main Page) </a>
+            <a href="{% url 'friends' %}"><i class="fas fa-user-friends"></i> Friends </a>
+            <a href="{% url 'messenger' %}"><i class="fas fa-comments"></i> Messenger </a>
+        </div>
+    {% endblock %}
+
+
+        {% block right-sidebar %}
+        <!------------ Беседы ----------->
+        <div class="sidebar-title">
+            <h4>Conversation</h4>
+            <a href="#">Hide</a>
+        </div>
+
+
+        <div class="online-list">
+            <div class="online">
+                <img src="{% static 'images/member-1.png' %}">
+            </div>
+            <p>Name Surname</p>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="{% static 'images/member-2.png' %}">
+            </div>
+            <p>Name Surname</p>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="{% static 'images/member-3.png' %}">
+            </div>
+            <p>Name Surname</p>
+        </div>
+
+
+        <div class="event">
+            
+        </div>
+    {% endblock %}
+
+    {% block main-container %}
+        <!-- main-content -------------------->
+        <div class="main-content">
+
+            <div class="write-post-container" style="margin-bottom: 18px;">
+
+                <div class="carousel" data-flickity='{ "wrapAround": true }'>
+                    <div class="carousel-cell"></div>
+                    <div class="carousel-cell"></div>
+                    <div class="carousel-cell"></div>
+                    <div class="carousel-cell"></div>
+                    <div class="carousel-cell"></div>
+                </div>
+
+                <!-- <div class="story-gallery">
+
+                <div class="story story1">
+                    <img src="{% static 'images/upload.png' %}">
+                    <p>Post Story</p>
+                </div>
+
+                <div class="story story2">
+                    <img src="{% static 'images/member-1.png' %}">
+                    <p>Alison</p>
+                </div>
+
+                <div class="story story3">
+                    <img src="{% static 'images/member-2.png' %}">
+                    <p>Jackson</p>
+                </div>
+
+                <div class="story story4">
+                    <img src="{% static 'images/member-3.png' %}">
+                    <p>Samona</p>
+                </div>
+
+                <div class="story story5">
+                    <img src="{% static 'images/member-4.png' %}">
+                    <p>John Doe</p>
+                </div>
+      
+            </div> -->
+            
+            </div>  
+
+
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="{% static 'images/profile-pic.png' %}">
+
+                    <div>
+                        <p>Name Surname</p>
+                        <small>Public <i class="fas fa-caret-down"></i> </small>   <!-- ? -->
+                    </div>
+                </div>
+
+
+                <div class="post-input-container">
+                    <div class="title">  
+                        <!-- <p>What's on your mind, (Name of the User)?</p> -->
+
+                        <a href="{% url 'create' %}" ><span>+</span> Добавить запись</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            {% if news %}
+                {% for element in news %}
+                <div class="post-container">
+                    <div class="post-row">
+                        <div class="user-profile">
+                            <img src="{% static 'images/profile-pic.png' %}">
+        
+                            <div>
+                                <p>Name Surname</p>
+                                <span>{{ element.date }}</span>   <!-- ? -->
+                                <!-- <span>June 24 2021, 13:40</span> -->
+                            </div>
+                        </div>
+    
+                        <a href="#"> <i class="fas fa-ellipsis-v"></i> </a>   <!-- Можно добавить Функционал (Потом нужно ПЕРЕПИСАТЬ) -->
+                    </div>
+
+
+                    <div class="alert alert-warning">
+                        <!-- <h3>{{ element.title }}</h3> -->
+                        <p>{{element.full_text}}</p>
+                        
+                        <a href="{% url 'news-detail' element.id %}" class="btn-more" >Редактировать</a>
+                    </div>
+
+
+                    <div class="post-row">
+                        <div class="activity-icons">
+                            <a href="#"><img src="{% static 'images/like-blue.png' %}"> 120 </a>
+                            <a href="{% url 'post-comment' element.id %}"><img src="{% static 'images/comments.png' %}"> 45 </a>
+                            <a href="#"><img src="{% static 'images/share.png' %}"> 20 </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="post-container">
+                    <p>У вас нет записей</p>
+                </div>
+            {% endif %}
+            
+
+
+    
+
+        </div>
+    {% endblock %}
+
+

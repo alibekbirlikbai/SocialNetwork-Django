@@ -1,0 +1,61 @@
+{% extends 'main/layouts/layout-additional.html' %}
+{% load static %}
+
+    {% block title %}
+        Форма по Комментария
+    {% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% endblock %}
+
+
+    {% block current-page %}
+        <div class="imp-links">
+            <a href="{% url 'profile' %}"><i class="fas fa-user-circle"></i> My Profile </a>
+            <a href="{% url 'news_home' %}"><i class="fas fa-newspaper"></i> News (Main Page) </a>
+            <a href="{% url 'friends' %}"><i class="fas fa-user-friends"></i> Friends </a>
+            <a href="{% url 'messenger' %}"><i class="fas fa-comments"></i> Messenger </a>
+
+            <a href="{% url 'create_comment' %}" id="current-page"><i class="fas fa-user-friends"></i> Create (Добавить комментарий) </a>
+        </div>
+    {% endblock %}
+
+
+
+    {% block main-container %}
+        <!-- main-content -------------------->
+        <div class="main-content">
+
+  
+
+            <div class="write-post-container">
+
+                <div class="title">
+                    <h2>Комментарий</h2>
+                </div>
+                
+                <div class="submit">
+                    <form method="post">
+                        {% csrf_token %}
+                        <!-- {{ form.title }}<br>
+                        {{ form.anons }}<br> -->
+                        {{ form.comment }}<br>
+                        {{ form.date }}<br>
+                        <span>{{ error }}</span>
+
+                        <button class="btn btn-success" type="submit">Добавить комментарий</button>
+                    </form>
+                </div>
+                
+            </div>
+
+
+
+
+
+
+        </div>
+    {% endblock %}
+
+

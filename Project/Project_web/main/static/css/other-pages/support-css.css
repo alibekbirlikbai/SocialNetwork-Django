@@ -1,0 +1,26 @@
+@import "../styles.css";
+
+.header {
+    min-width: 1000px;
+}
+
+
+
+.top {
+    display: grid;
+    grid-template-columns: 100%;
+
+    background: var(--bg-color);
+    border-radius: 4px;
+}
+
+
+#map {
+    height: 535px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;      /* Горизонтально */
+    align-items: center;         /* Вертикально */
+}
+
