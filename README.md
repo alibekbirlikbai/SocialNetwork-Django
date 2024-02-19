@@ -1,8 +1,6 @@
-# SocialNetwork
+## Project description
+*Project was based on - https://www.youtube.com/watch?v=NljIHlZRTTE&list=PLXIJuT5PMNcXUily9Kcr3R-DQnVnLKw2B&index=1&ab_channel=EasyTutorials
 
-This project was based on YouTube Tutorial - https://www.youtube.com/watch?v=NljIHlZRTTE&list=PLXIJuT5PMNcXUily9Kcr3R-DQnVnLKw2B&index=1&ab_channel=EasyTutorials
-
-## //Project description//
 Front-end requirements:
 1. Using bootstrap framework
 2. Add at least one slider
