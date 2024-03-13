@@ -1,35 +1,9 @@
 ## Project description
-*Project was based on - https://www.youtube.com/watch?v=NljIHlZRTTE&list=PLXIJuT5PMNcXUily9Kcr3R-DQnVnLKw2B&index=1&ab_channel=EasyTutorials
+Website (html, css) was based on - [EasyTutorials](https://www.youtube.com/watch?v=NljIHlZRTTE&list=PLXIJuT5PMNcXUily9Kcr3R-DQnVnLKw2B&index=1&ab_channel=EasyTutorials)
 
-Front-end requirements:
-1. Using bootstrap framework
-2. Add at least one slider
-3. Add at least one modal
-4. Must be at least 5 pages
-5. Add google map
-6. Use bootstrap forms
-7. Use bootstrap cards
-8. Must be mobile responsive
-9. Use git repository
-10. Add animations with bootstrap and js.
-	
+[Project requirements](https://drive.google.com/file/d/1Syrrc0RWEks20858wuBVoIOwYGv0_CAw/view?usp=sharing) (back-end)
 
-Back-end requirements:
-1. Connect to the database
-2. Create new app inside project using django command
-3. Create at least 2 tables in models file
-4. Connect at least two tables to each other using foreign id
-5. Use one base template that contain header and footer and import it in
-other templates
-6. Create new urls file in new app and import it in main urls file
-7. Create a dynamic template that will display the data of one element
-from the database using the slug or id of the element
-8. All dynamic data should be pulled from the database that you
-connected earlier
-9. Create a new page which will implement CRUD (Create, Read, Update,
-Delete) for the main table
-10. All links to navigate through the pages must have a name tag. And links
-in templates should work with this tag.
+---
 
 ## Demo
 ![projectWeb_Demo](https://user-images.githubusercontent.com/87764579/146643424-4b5b41b2-f37b-4ea4-bb52-05cc3dffd10a.png)
