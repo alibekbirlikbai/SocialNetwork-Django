@@ -1,7 +1,7 @@
-## Project description
-Website (html, css) was based on - [EasyTutorials](https://www.youtube.com/watch?v=NljIHlZRTTE&list=PLXIJuT5PMNcXUily9Kcr3R-DQnVnLKw2B&index=1&ab_channel=EasyTutorials)
+## Description
+Website _(html, css)_ was based on - [EasyTutorials](https://www.youtube.com/watch?v=NljIHlZRTTE&list=PLXIJuT5PMNcXUily9Kcr3R-DQnVnLKw2B&index=1&ab_channel=EasyTutorials)
 
-[Project requirements](https://drive.google.com/file/d/1Syrrc0RWEks20858wuBVoIOwYGv0_CAw/view?usp=sharing) (back-end)
+[Project requirements](https://drive.google.com/file/d/1Syrrc0RWEks20858wuBVoIOwYGv0_CAw/view?usp=sharing) _(back-end)_
 
 ---
 
